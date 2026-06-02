@@ -41,6 +41,7 @@ function App(): React.JSX.Element {
       style.id = 'portfolio-custom-styles';
       style.innerHTML = `
         /* Dynamic Theme Palette with CSS Variables */
+        
         :root {
           --color-accent: #4f46e5;
           --color-accent-hover: #4338ca;
@@ -65,6 +66,14 @@ function App(): React.JSX.Element {
           font-family: 'JetBrains Mono', 'Fira Code', monospace;
           transition: background-color 300ms ease, color 300ms ease;
         }
+        body {
+          transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+                }
+
+                /* Forzamos el fundido suave de fondos, textos y bordes en los componentes */
+                section, div, h1, h2, h3, h4, p, span, input, textarea, button {
+                  transition: background-color 500ms ease-in-out, color 500ms ease-in-out, border-color 500ms ease-in-out, box-shadow 500ms ease-in-out;
+                }
 
         /* Typewriter Cursor Blinking with CSS Variable Accent */
         @keyframes blink {

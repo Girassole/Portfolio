@@ -59,7 +59,7 @@ export function Hero(): React.JSX.Element {
     }, [text, isDeleting, delta, loopNum, lang]);
 
     return (
-        <section id="hero" className="relative min-h-screen flex items-center justify-center bg-[#faf5ff] dark:bg-[#0c021a] px-6 overflow-hidden transition-colors duration-300">
+        <section id="hero" className="relative min-h-screen flex items-center justify-center bg-[#faf5ff] dark:bg-[#0c021a] px-6 overflow-hidden transition-colors duration-500 ease-in-out">
             <StarryBackground isDark={isDark} />
 
             <div className="relative z-10 max-w-4xl mx-auto text-center mt-12 font-mono">

@@ -37,7 +37,7 @@ export function Contact(): React.JSX.Element {
     };
 
     return (
-        <section id="contact" className="py-24 bg-white dark:bg-[#0c021a] border-t border-slate-100 dark:border-[#1c0836] transition-colors duration-300">
+        <section id="contact" className="py-24 bg-[#fcfaff] dark:bg-[#0c021a] border-t border-slate-100 dark:border-[#1c0836]">
             <div className="max-w-6xl mx-auto px-6 font-mono">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">{t('contact.title')}</h2>

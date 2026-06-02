@@ -31,7 +31,7 @@ export function Certifications(): React.JSX.Element {
   ];
 
   return (
-    <section id="certifications" className="py-24 bg-white dark:bg-[#0c021a] border-t border-slate-100 dark:border-[#1c0836] transition-colors duration-300">
+    <section id="certifications" className="py-24 bg-[#fcfaff] dark:bg-[#0c021a] border-t border-slate-100 dark:border-[#1c0836]">
       <div className="max-w-6xl mx-auto px-6 font-mono">
 
         <div className="text-center mb-16">
