@@ -78,7 +78,7 @@ export function Hero(): React.JSX.Element {
                     </span>
 
                     <span className="text-accent bg-clip-text drop-shadow-[0_2px_15px_rgba(79,70,229,0.3)] dark:drop-shadow-[0_2px_15px_rgba(224,0,255,0.3)] tracking-wide uppercase">
-                        ESPERANZA CUENCA
+                        ESPERANZA
                     </span>
                 </h2>
 

@@ -6,13 +6,13 @@ export function Experience(): React.JSX.Element {
 
     const timeline = [
         {
-            date: "2024 - Present",
+            date: t('experience.date'),
             title: t('experience.job1Title'),
             company: t('experience.job1Company'),
             desc: t('experience.job1Desc')
         },
         {
-            date: "2023 - 2024",
+            date: t('experience.date2'),
             title: t('experience.job2Title'),
             company: t('experience.job2Company'),
             desc: t('experience.job2Desc')

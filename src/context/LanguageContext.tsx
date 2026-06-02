@@ -8,7 +8,7 @@ interface TranslationSchema {
     about: { title: string; subtitle: string; p1: string; p2: string; skillsTitle: string };
     projects: { title: string; subtitle: string; codeBtn: string; demoBtn: string; tourDesc: string; petsDesc: string };
     certifications: { title: string; subtitle: string; viewBtn: string; cert1: string; cert2: string; cert3: string };
-    experience: { title: string; subtitle: string; job1Title: string; job1Company: string; job1Desc: string; job2Title: string; job2Company: string; job2Desc: string };
+    experience: { title: string; subtitle: string; date: string, job1Title: string; job1Company: string; job1Desc: string; date2: string, job2Title: string; job2Company: string; job2Desc: string };
     contact: { title: string; subtitle: string; infoTitle: string; infoSubtitle: string; location: string; labelName: string; labelEmail: string; labelMsg: string; namePlaceholder: string; emailPlaceholder: string; msgPlaceholder: string; btnSend: string; btnSending: string; success: string };
     footer: { rights: string };
 }
@@ -42,16 +42,18 @@ const translations: Record<Language, TranslationSchema> = {
         },
         certifications: { title: "Mis Certificaciones", subtitle: "Títulos académicos y cursos de especialización tecnológica que he completado.", viewBtn: "Ver Credencial", cert1: "Desarrollo de Aplicaciones Web (DAW)", cert2: "Especialización en React & TypeScript", cert3: "Arquitectura backend robusta con Spring Boot" },
         experience: {
-            title: "Experiencia & Formación",
-            subtitle: "Mi trayectoria profesional y académica en el mundo tecnológico.",
+            title: "Experiencia y Formación",
+            subtitle: "Mi trayectoria profesional y académica en el mundo tecnológico",
+            date: "Marzo - Junio 2026",
             job1Title: "QA Automation (Prácticas)",
             job1Company: "Viewnext",
-            job1Desc: "Formación e implementación de planes de prueba y automatización de software utilizando Robot Framework y Selenium para garantizar la calidad en entornos empresariales.",
+            job1Desc: "Diseño y ejecución de planes de prueba automatizados utilizando Robot Framework y Selenium. Implementación del patrón Page Object Model (POM) y optimización de selectores XPath para la validación de portales web y flujos de datos complejos en entornos empresariales.",
+            date2: "2025 - Actualidad",
             job2Title: "Desarrollo de Aplicaciones Multiplataforma",
             job2Company: "Formación y Proyectos Académicos",
-            job2Desc: "Diseño de bases de datos relacionales, programación orientada a objetos en Java y creación de sistemas de escritorio y web robustos utilizando arquitecturas limpias."
+            job2Desc: "Diseño de bases de datos relacionales, programación orientada a objetos en Java y creación de aplicaciones completas (Full-Stack)."
         },
-        contact: { title: "Contacto", subtitle: "¿Tienes una propuesta o idea de proyecto? Hablemos y hagámosla realidad.", infoTitle: "Información de contacto", infoSubtitle: "Siempre atenta a nuevos desafíos. ¡Envíame un mensaje!", location: "Málaga, España", labelName: "Nombre", labelEmail: "Correo electrónico", labelMsg: "Tu mensaje", namePlaceholder: "Tu nombre aquí...", emailPlaceholder: "nombre@correo.com", msgPlaceholder: "Escribe tu mensaje...", btnSend: "Enviar Mensaje", btnSending: "Enviando...", success: "¡Mensaje enviado con éxito! Nos comunicaremos pronto." },
+        contact: { title: "Contacto", subtitle: "¿Tienes una propuesta o idea de proyecto? Hablemos y hagámosla realidad.", infoTitle: "Información de contacto", infoSubtitle: "Disponible para nuevos desafíos. ¡Envíame un mensaje!", location: "Málaga, España", labelName: "Nombre", labelEmail: "Correo electrónico", labelMsg: "Tu mensaje", namePlaceholder: "Tu nombre aquí...", emailPlaceholder: "nombre@correo.com", msgPlaceholder: "Escribe tu mensaje...", btnSend: "Enviar Mensaje", btnSending: "Enviando...", success: "¡Mensaje enviado con éxito! Nos comunicaremos pronto." },
         footer: { rights: "Todos los derechos reservados." }
     },
     en: {
@@ -84,12 +86,14 @@ const translations: Record<Language, TranslationSchema> = {
         experience: {
             title: "Experience & Education",
             subtitle: "My career trajectory and educational steps in the tech industry.",
+            date: "March - June 2026",
             job1Title: "QA Automation (Internship)",
             job1Company: "Viewnext",
-            job1Desc: "Training and deployment of test cases and software automation scripts utilizing Robot Framework and Selenium to ensure corporate software quality.",
+            job1Desc: "Design and execution of automated test suites utilizing Robot Framework and Selenium. Implementation of the Page Object Model (POM) pattern and optimization of XPath selectors for web portal validation and complex data flows in enterprise environments.",
+            date2: "2025 - present",
             job2Title: "Multiplatform Applications Development",
             job2Company: "Training and Academic Projects",
-            job2Desc: "Relational database design, Java object-oriented programming, and construction of robust desktop and web systems using clean architectures."
+            job2Desc: "Relational database design, object-oriented programming in Java, and end-to-end development of full-stack applications using clean architectures."
         },
         contact: { title: "Contact Me", subtitle: "Do you have a project idea or a proposal? Let's connect and make it happen.", infoTitle: "Contact Information", infoSubtitle: "Always open to new challenges. Send me a message!", location: "Malaga, Spain", labelName: "Name", labelEmail: "Email address", labelMsg: "Your message", namePlaceholder: "Your name here...", emailPlaceholder: "name@example.com", msgPlaceholder: "Type your message here...", btnSend: "Send Message", btnSending: "Sending...", success: "Message sent successfully! Talk to you soon." },
         footer: { rights: "All rights reserved." }

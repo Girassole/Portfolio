@@ -1,19 +1,39 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
+// ✉️ Importamos la librería de envío real
+import emailjs from '@emailjs/browser';
 
 export function Contact(): React.JSX.Element {
     const { t } = useLanguage();
     const [formState, setFormState] = useState({ name: '', email: '', message: '' });
-    const [status, setStatus] = useState<'idle' | 'sending' | 'success'>('idle');
+    const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setStatus('sending');
-        setTimeout(() => {
-            setStatus('success');
-            setFormState({ name: '', email: '', message: '' });
-            setTimeout(() => setStatus('idle'), 5000);
-        }, 1500);
+
+        const SERVICE_ID = 'service_out94he';
+        const TEMPLATE_ID = 'template_eb3a6i8';
+        const PUBLIC_KEY = 'VPJlJ-_ERnLKVvTv4';
+
+        // Estructuramos los parámetros para que coincidan con las variables de tu plantilla de EmailJS
+        const templateParams = {
+            name: formState.name,
+            email: formState.email,
+            message: formState.message,
+        };
+
+        emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+            .then(() => {
+                setStatus('success');
+                setFormState({ name: '', email: '', message: '' });
+                setTimeout(() => setStatus('idle'), 5000);
+            })
+            .catch((error) => {
+                console.error('Error al enviar el correo:', error);
+                setStatus('error');
+                setTimeout(() => setStatus('idle'), 4000);
+            });
     };
 
     return (
@@ -44,18 +64,26 @@ export function Contact(): React.JSX.Element {
                                 <div className="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-[#1f093a]/50 border border-indigo-100 dark:border-[#381161]/60 text-accent flex items-center justify-center font-bold text-lg">✉️</div>
                                 <div>
                                     <h4 className="font-semibold text-slate-900 dark:text-white">Email</h4>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400 font-sans">espe.dev@example.com</p>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400 font-sans">especuenca103@gmail.com</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="bg-slate-50 dark:bg-[#130526] p-8 rounded-2xl border border-slate-200/60 dark:border-[#381161]/60 shadow-sm">
-                        {status === 'success' ? (
+                        {status === 'success' && (
                             <div className="p-6 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-emerald-600 dark:text-emerald-400 text-center font-medium">
                                 ✨ {t('contact.success')}
                             </div>
-                        ) : (
+                        )}
+
+                        {status === 'error' && (
+                            <div className="p-6 bg-rose-500/10 border border-rose-500/30 rounded-xl text-rose-600 dark:text-rose-400 text-center font-medium">
+                                ❌ Ocurrió un error. Inténtalo de nuevo.
+                            </div>
+                        )}
+
+                        {(status === 'idle' || status === 'sending') && (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
                                     <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">{t('contact.labelName')}</label>
