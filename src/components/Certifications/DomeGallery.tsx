@@ -223,25 +223,27 @@ export function DomeGallery({
                 {/* 🪟 MODAL FLOTANTE NÍTIDO E INTERACTIVO */}
                 <div className="viewer" style={{ opacity: activeImg ? 1 : 0, transition: 'opacity 0.25s ease', pointerEvents: activeImg ? 'all' : 'none' }}>
 
-                    {/* 🔓 Fondo oscuro (scrim): Al pinchar aquí se cierra */}
                     <div className="scrim" onClick={() => setActiveImg(null)} style={{ pointerEvents: activeImg ? 'all' : 'none' }} />
 
-                    {/* 🎯 Imagen grande: Ahora responde también al onClick para cerrarse si pinchan encima */}
                     {activeImg && (
                         <div
                             className="enlarge"
                             onClick={() => setActiveImg(null)} // 🌟 Permite cerrar al hacer clic en cualquier parte de la imagen
                             style={{
-                                position: 'relative',
+                                position: 'fixed',
+                                inset: 0,
+                                margin: 'auto',
                                 zIndex: 40,
                                 transform: 'scale(1)',
                                 transition: `all ${DEFAULTS.enlargeTransitionMs}ms cubic-bezier(0.25, 1, 0.5, 1)`,
-                                maxWidth: '85vw',
-                                maxHeight: '75vh',
+                                width: 'auto',     // Deja que la proporción del certificado mande
+                                height: 'auto',
+                                maxWidth: '90vw',
+                                maxHeight: '85vh',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
-                                cursor: 'zoom-out' // Icono de lupa de alejamiento para indicar que se puede cerrar
+                                cursor: 'zoom-out'
                             }}
                         >
                             <img
