@@ -103,7 +103,7 @@ export function Hero(): React.JSX.Element {
 
                 <div className="mt-8 flex justify-center">
                     <a
-                        href="/CV_Esperanza_Cuenca_Zambrana.pdf"
+                        href={`${import.meta.env.BASE_URL}CV_Esperanza_Cuenca_Zambrana.pdf`}
                         download="CV_Esperanza_Cuenca_Zambrana.pdf"
                         className="inline-flex items-center space-x-2 px-6 py-3 border border-slate-300 dark:border-[#381161] rounded-xl hover:border-accent text-slate-700 dark:text-slate-300 hover:text-accent font-medium transition-all transform hover:-translate-y-0.5 text-sm"
                     >
