@@ -64,10 +64,7 @@ export function Experience(): React.JSX.Element {
 
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-2">
                             {/* Indicador de progreso dinámico B2 */}
-                            <div className="flex items-center space-x-2 text-xs text-purple-600 dark:text-purple-400 font-bold animate-pulse">
-                                <span className="text-sm">⚡</span>
-                                <span>{t('experience.cambridgeB2Progress')}</span>
-                            </div>
+
 
                             {/* Enlace directo para abrir el PDF en una pestaña nueva */}
                             <a

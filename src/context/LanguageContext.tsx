@@ -145,7 +145,7 @@ const translations: Record<Language, TranslationSchema> = {
             cambridgeB1Title: "B1 Preliminary (PET) — Cambridge English",
             cambridgeB1Desc: "Certificación oficial que acredita un nivel de competencia intermedio en inglés, capacitado para entornos profesionales y comprensión de documentación técnica.",
             cambridgeB2Progress: "En progreso: Preparación para la certificación B2 First (FCE)",
-            viewCertificateBtn: "👁️ Ver Título Oficial"
+            viewCertificateBtn: "Ver Título Oficial"
         },
         contact: { title: "Contacto", subtitle: "¿Tienes una propuesta o idea de proyecto? Hablemos y hagámosla realidad.", infoTitle: "Información de contacto", infoSubtitle: "Disponible para nuevos desafíos. ¡Envíame un mensaje!", location: "Málaga, España", labelName: "Nombre", labelEmail: "Correo electrónico", labelMsg: "Tu mensaje", namePlaceholder: "Tu nombre aquí...", emailPlaceholder: "nombre@correo.com", msgPlaceholder: "Escribe tu mensaje...", btnSend: "Enviar Mensaje", btnSending: "Enviando...", success: "¡Mensaje enviado con éxito! Nos comunicaremos pronto." },
         footer: { rights: "Todos los derechos reservados." }
@@ -225,7 +225,7 @@ const translations: Record<Language, TranslationSchema> = {
             cambridgeB1Title: "B1 Preliminary (PET) — Cambridge English",
             cambridgeB1Desc: "Official certification accrediting an intermediate level of English proficiency, qualified for professional environments and technical documentation comprehension.",
             cambridgeB2Progress: "In progress: Preparing for the B2 First (FCE) certification",
-            viewCertificateBtn: "👁️ View Official Certificate"
+            viewCertificateBtn: "View Official Certificate"
         },
         contact: { title: "Contact Me", subtitle: "Do you have a project idea or a proposal? Let's connect and make it happen.", infoTitle: "Contact Information", infoSubtitle: "Always open to new challenges. Send me a message!", location: "Malaga, Spain", labelName: "Name", labelEmail: "Email address", labelMsg: "Your message", namePlaceholder: "Your name here...", emailPlaceholder: "name@example.com", msgPlaceholder: "Type your message here...", btnSend: "Send Message", btnSending: "Sending...", success: "Message sent successfully! Talk to you soon." },
         footer: { rights: "All rights reserved." }
