@@ -6,8 +6,48 @@ interface TranslationSchema {
     nav: { about: string; projects: string; certifications: string; experience: string; contact: string };
     hero: { tag: string; welcome: string; role: string; description: string; ctaProjects: string; ctaContact: string; ctaCv: string };
     about: { title: string; subtitle: string; p1: string; p2: string; skillsTitle: string };
-    projects: { title: string; subtitle: string; codeBtn: string; demoBtn: string; tourDesc: string; petsDesc: string };
-    certifications: { title: string; subtitle: string; viewBtn: string; cert1: string; cert2: string; cert3: string };
+    projects: {
+        title: string;
+        subtitle: string;
+        codeBtn: string;
+        demoBtn: string;
+        tourDesc: string;
+        petsDesc: string;
+        expandVideo: string;
+        featuresTitle: string;
+        stackTitle: string;
+        hundredWays: {
+            title: string;
+            intro: string;
+            feat1Title: string;
+            feat1Desc: string;
+            feat2Title: string;
+            feat2Desc: string;
+            feat3Title: string;
+            feat3Desc: string;
+            feat4Title: string;
+            feat4Desc: string;
+            feat5Title: string;
+            feat5Desc: string;
+        }
+    };
+    certifications: {
+        title: string;
+        subtitle: string;
+        viewBtn: string;
+        cert1: string;
+        cert2: string;
+        cert3: string;
+        counterText: string;
+        certTitles: {
+            agile: string;
+            bootcamp: string;
+            python: string;
+            jenkins: string;
+            selenium: string;
+            xpath: string;
+        }
+    };
     experience: { title: string; subtitle: string; date: string, job1Title: string; job1Company: string; job1Desc: string; date2: string, job2Title: string; job2Company: string; job2Desc: string };
     contact: { title: string; subtitle: string; infoTitle: string; infoSubtitle: string; location: string; labelName: string; labelEmail: string; labelMsg: string; namePlaceholder: string; emailPlaceholder: string; msgPlaceholder: string; btnSend: string; btnSending: string; success: string };
     footer: { rights: string };
@@ -33,14 +73,47 @@ const translations: Record<Language, TranslationSchema> = {
             skillsTitle: "Mi Caja de Herramientas"
         },
         projects: {
-            title: "Mis Proyectos",
-            subtitle: "Una muestra seleccionada de las soluciones de software reales que he construido.",
-            codeBtn: "Código",
+            title: "Proyectos Destacados",
+            subtitle: "Demostraciones técnicas de aplicaciones completas y control de calidad.",
+            codeBtn: "Explorar Código en GitHub",
             demoBtn: "Demo En Vivo",
+            expandVideo: "🔍 Expandir Vídeo Demo",
+            featuresTitle: "🚀 Características Clave y Funcionalidades",
+            stackTitle: "🛠️ Stack Tecnológico & Persistencia",
             tourDesc: "Plataforma interactiva para agencias de viajes (Mundo Tour) con filtros de reservas dinámicos, maquetación personalizada y arquitectura en Laravel.",
-            petsDesc: "Sistema CRUD integral (Refugio Patitas Peludas) para la gestión de adopciones y control de animales, desarrollado con JavaFX y bases de datos relacionales."
+            petsDesc: "Sistema CRUD integral (Refugio Patitas Peludas) para la gestión de adopciones y control de animales, desarrollado con JavaFX y bases de datos relacionales.",
+            hundredWays: {
+                title: "100 Maneras de Morir Web App",
+                intro: "¡Bienvenido/a al proyecto más oscuro y divertido de mi porfolio! Esta aplicación combina humor negro, interactividad y una sólida arquitectura de desarrollo para ofrecer una experiencia dinámica mientras se gestionan datos en tiempo real y se consumen servicios externos.",
+                feat1Title: "🔐 Sistema de Autenticación",
+                feat1Desc: "Gestión segura de usuarios (CRUD de dos capas) desde el login, permitiendo el registro e inicio de sesión seguro.",
+                feat2Title: "🔌 Integración de API (Armas)",
+                feat2Desc: "Conexión con una API externa del famoso videojuego Elden Ring.",
+                feat3Title: "💀 El Test de la Muerte",
+                feat3Desc: "Cuestionario interactivo con lógica personalizada que calcula, con un toque irreverente, cuál sería tu absurdo destino final.",
+                feat4Title: "🗳️ Votación en Tiempo Real",
+                feat4Desc: "Sección interactiva donde los usuarios exploran el catálogo de muertes y votan por sus favoritas.",
+                feat5Title: "📊 Ranking Global",
+                feat5Desc: "Panel de clasificación dinámico que muestra las muertes más votadas por la comunidad de forma visual y ordenada."
+            }
         },
-        certifications: { title: "Mis Certificaciones", subtitle: "Títulos académicos y cursos de especialización tecnológica que he completado.", viewBtn: "Ver Credencial", cert1: "Desarrollo de Aplicaciones Web (DAW)", cert2: "Especialización en React & TypeScript", cert3: "Arquitectura backend robusta con Spring Boot" },
+        certifications: {
+            title: "Certificaciones Especializadas",
+            subtitle: "Explora mis títulos y especializaciones de Udemy de forma interactiva.",
+            viewBtn: "Ver Credencial",
+            cert1: "Desarrollo de Aplicaciones Web (DAW)",
+            cert2: "Especialización en React & TypeScript",
+            cert3: "Arquitectura backend robusta con Spring Boot",
+            counterText: "Certificado",
+            certTitles: {
+                agile: "Agile + Scrum: Curso intensivo para sumergirse y profundizar",
+                bootcamp: "Bootcamp de ChatGPT y Prompt Engineering: de cero a experto",
+                python: "Python for Absolute Beginners",
+                jenkins: "Robot Framework - Jenkins CI & Git Version Control",
+                selenium: "Robot Framework with Python - Selenium/API Automation Testing",
+                xpath: "Master XPath and CSS Selectors for Selenium WebDriver"
+            }
+        },
         experience: {
             title: "Experiencia y Formación",
             subtitle: "Mi trayectoria profesional y académica en el mundo tecnológico",
@@ -76,13 +149,46 @@ const translations: Record<Language, TranslationSchema> = {
         },
         projects: {
             title: "Featured Projects",
-            subtitle: "A curated selection of real-world software solutions I have built.",
-            codeBtn: "Code",
+            subtitle: "Technical demonstrations of complete applications and quality control.",
+            codeBtn: "Explore Code on GitHub",
             demoBtn: "Live Demo",
+            expandVideo: "🔍 Expand Demo Video",
+            featuresTitle: "🚀 Key Features and Functionalities",
+            stackTitle: "🛠️ Technology Stack & Persistence",
             tourDesc: "Interactive travel agency platform (Mundo Tour) featuring dynamic booking filters, custom layouts, and built on Laravel architecture.",
-            petsDesc: "Comprehensive CRUD system (Patitas Peludas Shelter) for managing animal adoptions and shelter data, developed with JavaFX and relational databases."
+            petsDesc: "Comprehensive CRUD system (Patitas Peludas Shelter) for managing animal adoptions and shelter data, developed with JavaFX and relational databases.",
+            hundredWays: {
+                title: "100 Ways to Die Web App",
+                intro: "Welcome to the darkest and funniest project in my portfolio! This application combines dark humor, interactivity, and a robust development architecture to deliver a dynamic user experience while managing real-time data and consuming external services.",
+                feat1Title: "🔐 Authentication System",
+                feat1Desc: "Secure user management (two-layer CRUD) from the login stage, allowing safe registration and sign-in processes.",
+                feat2Title: "🔌 API Integration (Weapons)",
+                feat2Desc: "Connection and integration with an external API from the famous video game Elden Ring.",
+                feat3Title: "💀 The Humanistic Death Test",
+                feat3Desc: "Interactive questionnaire built with custom logic that calculates, with an irreverent touch, what your absurd ultimate fate would be.",
+                feat4Title: "🗳️ Real-Time Voting",
+                feat4Desc: "An interactive section where users can browse the death catalog and vote for their favorite choices.",
+                feat5Title: "📊 Global Ranking",
+                feat5Desc: "A dynamic leaderboard that displays the most voted deaths by the community in an organized and visual manner."
+            }
         },
-        certifications: { title: "My Certifications", subtitle: "Academic degrees and specialized technological training I have successfully completed.", viewBtn: "View Credential", cert1: "Web Applications Development (DAW)", cert2: "React & TypeScript Specialization", cert3: "Robust Backend Architecture with Spring Boot" },
+        certifications: {
+            title: "Specialized Certifications",
+            subtitle: "Explore my titles and specializations from Udemy in an interactive way.",
+            viewBtn: "View Credential",
+            cert1: "Web Applications Development (DAW)",
+            cert2: "React & TypeScript Specialization",
+            cert3: "Robust Backend Architecture with Spring Boot",
+            counterText: "Certificate",
+            certTitles: {
+                agile: "Agile + Scrum: Intensive course to immerse and go deeper",
+                bootcamp: "ChatGPT Bootcamp and Prompt Engineering: from zero to expert",
+                python: "Python for Absolute Beginners",
+                jenkins: "Robot Framework - Jenkins CI & Git Version Control",
+                selenium: "Robot Framework with Python - Selenium/API Automation Testing",
+                xpath: "Master XPath and CSS Selectors for Selenium WebDriver"
+            }
+        },
         experience: {
             title: "Experience & Education",
             subtitle: "My career trajectory and educational steps in the tech industry.",
