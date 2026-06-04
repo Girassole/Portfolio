@@ -48,7 +48,23 @@ interface TranslationSchema {
             xpath: string;
         }
     };
-    experience: { title: string; subtitle: string; date: string, job1Title: string; job1Company: string; job1Desc: string; date2: string, job2Title: string; job2Company: string; job2Desc: string };
+    experience: {
+        title: string;
+        subtitle: string;
+        date: string;
+        job1Title: string;
+        job1Company: string;
+        job1Desc: string;
+        date2: string;
+        job2Title: string;
+        job2Company: string;
+        job2Desc: string;
+        certificationsTitle: string;
+        cambridgeB1Title: string;
+        cambridgeB1Desc: string;
+        cambridgeB2Progress: string;
+        viewCertificateBtn: string;
+    };
     contact: { title: string; subtitle: string; infoTitle: string; infoSubtitle: string; location: string; labelName: string; labelEmail: string; labelMsg: string; namePlaceholder: string; emailPlaceholder: string; msgPlaceholder: string; btnSend: string; btnSending: string; success: string };
     footer: { rights: string };
 }
@@ -68,7 +84,7 @@ const translations: Record<Language, TranslationSchema> = {
         about: {
             title: "Sobre mí",
             subtitle: "Quién soy y las herramientas que utilizo en mi día a día.",
-            p1: "¡Hola! Soy Esperanza Cuenca. Tras graduarme en Criminología, decidí dar un giro de 180 grados a mi carrera para fusionar la analítica y la investigación con el Desarrollo de Aplicaciones Multiplataforma (DAM). Mi objetivo es claro: encontrar el punto exacto donde el software ayuda a crear un entorno digital más seguro, organizado y eficiente.",
+            p1: "¡Hola! Soy Esperanza Cuenca. Tras graduarme en Criminología, decidí dar un giro de 180 grados a mi carrera para fusionar la analítica y la investigación con el Desarrollo de Aplicaciones Multiplataforma (DAM). Mi objetivo es claro: encontrar el punto exacto donde el software ayuda a crear un entorno digital más seguro, organized y eficiente.",
             p2: "Me especializo en crear aplicaciones robustas e integrar el desarrollo con el mundo del QA y el testing automatizado. Me define una curiosidad insaciable, una fuerte ética de trabajo y una habilidad natural para resolver problemas complejos hasta encontrar la solución más lógica y segura, garantizando siempre la máxima calidad en el código.",
             skillsTitle: "Mi Caja de Herramientas"
         },
@@ -124,7 +140,12 @@ const translations: Record<Language, TranslationSchema> = {
             date2: "2025 - Actualidad",
             job2Title: "Desarrollo de Aplicaciones Multiplataforma",
             job2Company: "Formación y Proyectos Académicos",
-            job2Desc: "Diseño de bases de datos relacionales, programación orientada a objetos en Java y creación de aplicaciones completas (Full-Stack)."
+            job2Desc: "Diseño de bases de datos relacionales, programación orientada a objetos en Java y creación de aplicaciones completas (Full-Stack).",
+            certificationsTitle: "Idiomas y Certificaciones Oficiales",
+            cambridgeB1Title: "B1 Preliminary (PET) — Cambridge English",
+            cambridgeB1Desc: "Certificación oficial que acredita un nivel de competencia intermedio en inglés, capacitado para entornos profesionales y comprensión de documentación técnica.",
+            cambridgeB2Progress: "En progreso: Preparación para la certificación B2 First (FCE)",
+            viewCertificateBtn: "👁️ Ver Título Oficial"
         },
         contact: { title: "Contacto", subtitle: "¿Tienes una propuesta o idea de proyecto? Hablemos y hagámosla realidad.", infoTitle: "Información de contacto", infoSubtitle: "Disponible para nuevos desafíos. ¡Envíame un mensaje!", location: "Málaga, España", labelName: "Nombre", labelEmail: "Correo electrónico", labelMsg: "Tu mensaje", namePlaceholder: "Tu nombre aquí...", emailPlaceholder: "nombre@correo.com", msgPlaceholder: "Escribe tu mensaje...", btnSend: "Enviar Mensaje", btnSending: "Enviando...", success: "¡Mensaje enviado con éxito! Nos comunicaremos pronto." },
         footer: { rights: "Todos los derechos reservados." }
@@ -199,7 +220,12 @@ const translations: Record<Language, TranslationSchema> = {
             date2: "2025 - present",
             job2Title: "Multiplatform Applications Development",
             job2Company: "Training and Academic Projects",
-            job2Desc: "Relational database design, object-oriented programming in Java, and end-to-end development of full-stack applications using clean architectures."
+            job2Desc: "Relational database design, object-oriented programming in Java, and end-to-end development of full-stack applications using clean architectures.",
+            certificationsTitle: "Languages & Official Certifications",
+            cambridgeB1Title: "B1 Preliminary (PET) — Cambridge English",
+            cambridgeB1Desc: "Official certification accrediting an intermediate level of English proficiency, qualified for professional environments and technical documentation comprehension.",
+            cambridgeB2Progress: "In progress: Preparing for the B2 First (FCE) certification",
+            viewCertificateBtn: "👁️ View Official Certificate"
         },
         contact: { title: "Contact Me", subtitle: "Do you have a project idea or a proposal? Let's connect and make it happen.", infoTitle: "Contact Information", infoSubtitle: "Always open to new challenges. Send me a message!", location: "Malaga, Spain", labelName: "Name", labelEmail: "Email address", labelMsg: "Your message", namePlaceholder: "Your name here...", emailPlaceholder: "name@example.com", msgPlaceholder: "Type your message here...", btnSend: "Send Message", btnSending: "Sending...", success: "Message sent successfully! Talk to you soon." },
         footer: { rights: "All rights reserved." }
