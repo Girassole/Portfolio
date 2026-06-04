@@ -68,7 +68,7 @@ export function Experience(): React.JSX.Element {
 
                             {/* Enlace directo para abrir el PDF en una pestaña nueva */}
                             <a
-                                href="/certificado-cambridge-b1.pdf"
+                                href={`${import.meta.env.BASE_URL}certificado-cambridge-b1.pdf`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center space-x-1.5 py-1.5 px-3 rounded-lg text-xs font-bold bg-slate-50 dark:bg-[#1f0a3a]/40 border border-slate-200 dark:border-[#381161]/60 text-slate-700 dark:text-slate-300 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-600 dark:hover:text-white hover:border-purple-600 dark:hover:border-purple-600 transition-all duration-300 shadow-sm text-center"
