@@ -7,6 +7,7 @@ import phyton from '../../assets/certs/phyton_beginers.jpg';
 import jenkins from '../../assets/certs/robot_jenkins.jpg';
 import selenium from '../../assets/certs/robot_selenium.jpg';
 import xpath from '../../assets/certs/xpath.jpg';
+import git from '../../assets/certs/git.jpg';
 
 interface Certificate {
   id: number;
@@ -27,6 +28,7 @@ export function Certifications(): React.JSX.Element {
     { id: 4, titleKey: "certifications.certTitles.jenkins", image: jenkins },
     { id: 5, titleKey: "certifications.certTitles.selenium", image: selenium },
     { id: 6, titleKey: "certifications.certTitles.xpath", image: xpath },
+    { id: 7, titleKey: "certifications.certTitles.git", image: git }
   ];
 
   const totalCertificates = certificatesList.length;
